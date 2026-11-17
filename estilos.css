@@ -1,0 +1,181 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #eff6ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor-principal {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+/* ENCABEZADO */
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icono-temperatura {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.encabezado h1 {
+    color: #1e3a8a;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.encabezado p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* TARJETA DEL CONVERTIDOR */
+
+.tarjeta-convertidor {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* FORMULARIO */
+
+.formulario {
+    width: 100%;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.campo label {
+    color: #334155;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    font-size: 15px;
+    color: #334155;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* BOTÓN CONVERTIR */
+
+#boton-convertir {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#boton-convertir:hover:not(:disabled) {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+#boton-convertir:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+
+/* RESULTADO */
+
+.resultado {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    margin-top: 25px;
+    padding: 20px;
+    text-align: center;
+}
+
+.resultado h2 {
+    color: #1e40af;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+#valor-convertido {
+    color: #334155;
+    font-size: 17px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+
+/* PIE DE PÁGINA */
+
+.pie-pagina {
+    text-align: center;
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    .encabezado h1 {
+        font-size: 24px;
+    }
+    .encabezado p {
+        font-size: 14px;
+    }
+    .tarjeta-convertidor {
+        padding: 22px 18px;
+    }
+    .icono-temperatura {
+        font-size: 45px;
+    }
+}
